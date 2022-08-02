@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220802 16:14:41.943" rpa="false" schemaversion="3">
+<suite id="s1" name="amazonHomePageTest" source="C:\Users\tolga\PycharmProjects\amazonCreateAccount\filterTests\amazonHomePageTest.robot">
+<test id="s1-t1" name="verify" line="8">
+<kw name="check the amazon" library="amazonHomePageApp">
+<kw name="Go to Amazon" library="amazonHomePage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220802 16:14:42.857" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<status status="PASS" starttime="20220802 16:14:42.857" endtime="20220802 16:14:47.866"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:42.856" endtime="20220802 16:14:47.867"/>
+</kw>
+<kw name="Click to SingIn" library="amazonHomePage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220802 16:14:47.868" endtime="20220802 16:14:47.918"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:47.918" level="INFO">Clicking element 'id=sp-cc-accept'.</msg>
+<status status="PASS" starttime="20220802 16:14:47.918" endtime="20220802 16:14:48.117"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${singInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:48.119" level="INFO">Clicking element 'id=nav-link-accountList'.</msg>
+<status status="PASS" starttime="20220802 16:14:48.117" endtime="20220802 16:14:49.265"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:47.867" endtime="20220802 16:14:49.265"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:42.856" endtime="20220802 16:14:49.265"/>
+</kw>
+<kw name="Click The New Acaunt" library="amazonLoginPageApp">
+<kw name="Go to New Acaunt Page" library="amazonLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${newAcaunt}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.267" level="INFO">Clicking element 'id=auth-create-account-link'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.267" endtime="20220802 16:14:49.637"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:49.266" endtime="20220802 16:14:49.637"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:49.266" endtime="20220802 16:14:49.637"/>
+</kw>
+<kw name="Fill Information" library="amazonCreateAccountApp">
+<kw name="Click The Name Area" library="amazonCreateAccount">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${adAlanıBelirleyici}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.641" level="INFO">Clicking element 'id=ap_customer_name'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.639" endtime="20220802 16:14:49.709"/>
+</kw>
+<kw name="First Name" library="FakerLibrary">
+<var>${ad}</var>
+<msg timestamp="20220802 16:14:49.710" level="INFO">${ad} = Taylor</msg>
+<status status="PASS" starttime="20220802 16:14:49.710" endtime="20220802 16:14:49.710"/>
+</kw>
+<kw name="Last Name" library="FakerLibrary">
+<var>${soyad}</var>
+<msg timestamp="20220802 16:14:49.710" level="INFO">${soyad} = Martinez</msg>
+<status status="PASS" starttime="20220802 16:14:49.710" endtime="20220802 16:14:49.711"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${adAlanıBelirleyici}</arg>
+<arg>${ad} ${soyad}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.711" level="INFO">Typing text 'Taylor Martinez' into text field 'id=ap_customer_name'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.711" endtime="20220802 16:14:49.794"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${telAlanıBelirleyici}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.794" level="INFO">Clicking element 'id=ap_email'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.794" endtime="20220802 16:14:49.853"/>
+</kw>
+<kw name="Random Number" library="FakerLibrary">
+<var>${tel}</var>
+<arg>digits=${7}</arg>
+<doc>Generate a random integer according to the following rules:</doc>
+<msg timestamp="20220802 16:14:49.855" level="INFO">${tel} = 8700311</msg>
+<status status="PASS" starttime="20220802 16:14:49.854" endtime="20220802 16:14:49.855"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${telAlanıBelirleyici}</arg>
+<arg>0777 ${tel}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.855" level="INFO">Typing text '0777 8700311' into text field 'id=ap_email'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.855" endtime="20220802 16:14:49.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passAlanıBelirleyici}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:49.954" level="INFO">Clicking element 'id=ap_password'.</msg>
+<status status="PASS" starttime="20220802 16:14:49.953" endtime="20220802 16:14:50.021"/>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<var>${pass}</var>
+<doc>Generate a random password of the specified ``length``.</doc>
+<msg timestamp="20220802 16:14:50.021" level="INFO">${pass} = D0%wqD8v^&amp;</msg>
+<status status="PASS" starttime="20220802 16:14:50.021" endtime="20220802 16:14:50.021"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passAlanıBelirleyici}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:50.022" level="INFO">Typing text 'D0%wqD8v^&amp;' into text field 'id=ap_password'.</msg>
+<status status="PASS" starttime="20220802 16:14:50.022" endtime="20220802 16:14:50.121"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${passAlanıBelirleyiciD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:50.122" level="INFO">Clicking element 'id=ap_password_check'.</msg>
+<status status="PASS" starttime="20220802 16:14:50.122" endtime="20220802 16:14:50.459"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${passAlanıBelirleyiciD}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:50.459" level="INFO">Typing text 'D0%wqD8v^&amp;' into text field 'id=ap_password_check'.</msg>
+<status status="PASS" starttime="20220802 16:14:50.459" endtime="20220802 16:14:50.550"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${telDogrula}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220802 16:14:50.550" level="INFO">Clicking element 'id=continue'.</msg>
+<status status="PASS" starttime="20220802 16:14:50.550" endtime="20220802 16:14:51.733"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:49.638" endtime="20220802 16:14:51.733"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:49.638" endtime="20220802 16:14:51.733"/>
+</kw>
+<kw name="Close" library="imageVerifyPageApp">
+<kw name="isVisable" library="imageVerifyPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${resendCode}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220802 16:14:51.735" endtime="20220802 16:14:51.762"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220802 16:14:51.763" endtime="20220802 16:14:53.925"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:51.734" endtime="20220802 16:14:53.926"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:51.734" endtime="20220802 16:14:53.927"/>
+</kw>
+<status status="PASS" starttime="20220802 16:14:42.855" endtime="20220802 16:14:53.928"/>
+</test>
+<status status="PASS" starttime="20220802 16:14:41.945" endtime="20220802 16:14:53.932"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="amazonHomePageTest">amazonHomePageTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
